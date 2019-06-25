@@ -1,0 +1,99 @@
+@import url('https://fonts.googleapis.com/css?family=Mali&display=swap');
+
+body {
+    background-color: #3D7DCA;
+    color: #fff;
+    font-family: 'Mali', cursive;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+#getColor {
+    padding: 10px;
+    background-color: transparent;
+    box-shadow: none;
+    border: 1px solid #fff;
+    cursor: pointer;
+    color: #fff;
+    transition: all .2s;
+    font-size: 16px;
+    margin-top: 20px;
+    font-family: 'Mali', cursive;
+}
+
+#getColor.loading {
+    pointer-events: none;
+    opacity: .5;
+}
+
+#getColor:not(.loading) .lds-dual-ring {
+    display: none !important;
+}
+
+#getColor:hover {
+    color: #3D7DCA;
+    background-color: #fff;
+    border-color: #fff;
+}
+
+#generatedPokemon {
+    text-align: center;
+}
+
+#generatedPokemon img {
+    height: 200px;
+    border: 1px solid;
+    border-radius: 50%;
+    box-shadow: 0px 2px 17px rgba(0, 0, 0, .2);
+    margin-bottom: 10px;
+    transition: all .2s;
+}
+
+#generatedPokemon img:hover {
+    transform: scale(1.2);
+}
+
+#generatedColor {
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.title {
+    font-size: 4rem;
+    margin-bottom: 5px;
+}
+
+.pokemon-name {
+    text-transform: uppercase;
+}
+
+/* Spinner from: https://loading.io/css/ */
+.lds-dual-ring {
+  display: inline-block;
+  width: 18px;
+  height: 18px;
+}
+.lds-dual-ring:after {
+  content: " ";
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  margin: 1px;
+  border-radius: 50%;
+  border: 2px solid #fff;
+  border-color: #fff transparent #fff transparent;
+  animation: lds-dual-ring 1.2s linear infinite;
+}
+@keyframes lds-dual-ring {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}

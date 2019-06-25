@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link href="css/index.css" rel="stylesheet" />
+        <title>Color to Pokemon</title>
+    </head>
+    <body>
+        <div class="container">
+            <h1 class="title">Color to Pokemon</h1>
+            <span>Find the Pokemon with the nearest color</span>
+            <button id="getColor" type="button">New Color <span class="lds-dual-ring"></span></button>
+            <span id="generatedColor"></span>
+            <div id="generatedPokemon">
+            </div>
+        </div>
+        <script src="https://unpkg.com/pokeapi-js-wrapper/dist/index.js"></script>
+        <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+        <script src="js/nearestColor.js"></script>
+        <script src="js/index.js"></script>
+    </body>
+</html>
